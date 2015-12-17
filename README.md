@@ -36,7 +36,7 @@ pm.deinterleave_latlng(geohash)                       # returns (40.723470943048
 ```
 
 
-* **3D hashing**
+* **3D-hashing**
 ```python
 import pymorton as pm
 
@@ -48,7 +48,7 @@ pm.deinterleave3(mortoncode)              # returns (100, 200, 50)
 ```
 
 
-* **2D hashing**
+* **2D-hashing**
 ```python
 import pymorton as pm
 mortoncode = pm.interleave(100, 200)     # returns (46224)
