@@ -7,8 +7,6 @@ A simple morton coding library with geo-hashing support.
 In mathematical analysis and computer science, Z-order, Morton order, or Morton code is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by G. M. Morton.[1] The z-value of a point in multidimensions is simply calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used such as binary search trees, B-trees, skip lists or (with low significant bits truncated) hash tables. The resulting ordering can equivalently be described as the order one would get from a depth-first traversal of a quadtree. ([Wikipedia](https://en.wikipedia.org/wiki/Z-order_curve))
 
 
-[Background](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiYn_Cm1-HJAhVBfhoKHUuCD94QFggdMAA&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FZ-order_curve&usg=AFQjCNGhPU_3H5mAR5Xy9AvgMuLqz0PHIQ&sig2=HePiin_jIKB8RpYCKKct3w)
-
 ## Installation
 
 ```
