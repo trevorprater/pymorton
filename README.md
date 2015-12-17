@@ -55,21 +55,21 @@ pm.deinterleave_latlng(geohash)
     * description: Returns a hash (int) representing `x, y`.
 
 - `pymorton.interleave3(x, y, z)`
-    * description: Returns a hash (int)\nrepresenting `x, y, z`.
+    * description: Returns a hash (int) representing `x, y, z`.
 
 - `pymorton.interleave_latlng(lat, lng)`
     * description: Returns a hash (string base-4)
                    representing `lat, lng`.
 
-- `pymorton.deinterleave2(n)`
+- `pymorton.deinterleave2(hash)`
     * description: Returns a tuple representing the arguments to
                    the corresponding interleave2() call.
 
-- `pymorton.deinterleave3(n)`
+- `pymorton.deinterleave3(hash)`
     * description: Returns a tuple representing the arguments to
                    the corresponding interleave3() call.
 
-- `pymorton.deinterleave_latlng(lat, lng)`
+- `pymorton.deinterleave_latlng(hash)`
     * description: Returns a tuple representing the arguments to
                    the corresponding interleave_latlng() call.
 
