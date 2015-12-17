@@ -61,8 +61,8 @@ pm.deinterleave_latlng(geohash)                       # returns (40.723470943048
 
 ## API
 - `pymorton.interleave(*args)`
-    * Hashes x, y or x, y, z into a single value.
-                   Wraps interleave2() and interleave3().
+    * Hashes `x, y` or `x, y, z` into a single value.
+                   This function wraps interleave2() and interleave3() by supporting variable-length args.
 
 - `pymorton.interleave2(x, y)`
     * Returns a hash (int) representing `x, y`.
