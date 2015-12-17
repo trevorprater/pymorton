@@ -21,15 +21,11 @@ python setup.py install
 
 ## Tests
 
-Simply run:
-```
-nosetests
-```
+From the root directory, execute `nosetests`.
 
 ## Usage
 
-
-* 3-d hashing
+* **3-d hashing**
 ```python
 
 import pymorton as pm
@@ -42,7 +38,7 @@ pm.deinterleave3(mortoncode) # returns (100, 200, 50)
 ```
 
 
-* 2-d hashing
+* **2-d hashing**
 ```
 mortoncode = pm.interleave(100, 200) # returns (46224)
 # or
@@ -51,7 +47,7 @@ pm.deinterleave2(mortoncode) #returns (100, 200)
 ```
 
 
-* geo-hashing
+* **geo-hashing**
 ```
 geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
 pm.deinterleave_latlng(geohash) # returns (40.723470943048596, -73.98536103777587)
@@ -59,7 +55,7 @@ pm.deinterleave_latlng(geohash) # returns (40.723470943048596, -73.9853610377758
 
 
 ## API
-- `pymorton.interleave(**args)`
+- `pymorton.interleave(*args)`
     * description: Hashes x, y or x, y, z into a single value.
                    Wraps interleave2() and interleave3().
 
