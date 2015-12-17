@@ -43,6 +43,7 @@ pm.deinterleave3(mortoncode)              # returns (100, 200, 50)
 mortoncode = pm.interleave(100, 200)     # returns (46224)
 # or
 mortoncode = pm.interleave2(100, 200)    # returns (46224)
+
 pm.deinterleave2(mortoncode)             # returns (100, 200)
 ```
 
