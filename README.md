@@ -30,27 +30,27 @@ From the root directory, execute `nosetests`.
 
 import pymorton as pm
 
-mortoncode = pm.interleave(100, 200, 50) # returns 5162080
+mortoncode = pm.interleave(100, 200, 50)  # returns 5162080
 # or
 mortoncode = pm.interleave3(100, 200, 50) # returns 5162080
 
-pm.deinterleave3(mortoncode) # returns (100, 200, 50)
+pm.deinterleave3(mortoncode)              # returns (100, 200, 50)
 ```
 
 
 * **2-d hashing**
 ```
-mortoncode = pm.interleave(100, 200) # returns (46224)
+mortoncode = pm.interleave(100, 200)     # returns (46224)
 # or
-mortoncode = pm.interleave2(100, 200) # returns (46224)
-pm.deinterleave2(mortoncode) #returns (100, 200)
+mortoncode = pm.interleave2(100, 200)    # returns (46224)
+pm.deinterleave2(mortoncode)             # returns (100, 200)
 ```
 
 
 * **geo-hashing**
 ```
 geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
-pm.deinterleave_latlng(geohash) # returns (40.723470943048596, -73.98536103777587)
+pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
 ```
 
 
