@@ -81,8 +81,6 @@ def __unpart1by2(n):
 
 
 def interleave2(*args):
-    print args
-    print type(args)
     if len(args) != 2:
         raise ValueError('Usage: interleave2(x, y)')
     for arg in args:
