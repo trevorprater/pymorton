@@ -2,7 +2,7 @@
 
 A simple morton coding library with geo-hashing support.
 
-![](https://upload.wikimedia.org/wikipedia/commons/d/da/Lebesgue-3d-step3.png)
+![](https://upload.wikimedia.org/wikipedia/commons/d/da/Lebesgue-3d-step3.png) ![](http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png)
 
 In mathematical analysis and computer science, Z-order, Morton order, or Morton code is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by G. M. Morton. The z-value of a point in multidimensions is simply calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used such as binary search trees, B-trees, skip lists or (with low significant bits truncated) hash tables. The resulting ordering can equivalently be described as the order one would get from a depth-first traversal of a quadtree. ([Wikipedia](https://en.wikipedia.org/wiki/Z-order_curve))
 
@@ -29,7 +29,7 @@ nosetests
 ## Usage
 
 
-* 3-d data hashing
+* 3-d hashing
 ```python
 
 import pymorton as pm
@@ -41,7 +41,8 @@ mortoncode = pm.interleave3(100, 200, 50) # returns 5162080
 pm.deinterleave3(mortoncode) # returns (100, 200, 50)
 ```
 
-* 2-d data hashing
+
+* 2-d hashing
 ```
 mortoncode = pm.interleave(100, 200) # returns (46224)
 # or
@@ -49,11 +50,13 @@ mortoncode = pm.interleave2(100, 200) # returns (46224)
 pm.deinterleave2(mortoncode) #returns (100, 200)
 ```
 
-* Geohashing
+
+* geo-hashing
 ```
 geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
 pm.deinterleave_latlng(geohash) # returns (40.723470943048596, -73.98536103777587)
 ```
+
 
 ## API
 - `pymorton.interleave(**args)`
