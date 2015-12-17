@@ -1,6 +1,6 @@
 # pymorton
 
-A simple morton coding library with geo-hashing support.
+A simple library that enables Morton coding/hashing with built-in geo-hashing support.
 
 ![](http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png)
 
