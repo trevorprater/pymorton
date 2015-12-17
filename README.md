@@ -34,26 +34,26 @@ import pymorton as pm
 
 # three-dimensional hashing example
 #####################################################
-hash = pm.interleave(100, 200, 50)
+mortoncode = pm.interleave(100, 200, 50) # returns 5162080
 # or
-hash = pm.interleave3(100, 200, 50)
-pm.deinterleave3(hash) #returns (100, 200, 50)
+mortoncode = pm.interleave3(100, 200, 50) # returns 5162080
+
+pm.deinterleave3(mortoncode) # returns (100, 200, 50)
 #####################################################
 
 # two-dimensional hashing example
 #####################################################
-hash = pm.interleave(100, 200)
+mortoncode = pm.interleave(100, 200) # returns (46224)
 # or
-hash = pm.interleave2(100, 200)
-pm.deinterleave2(hash) #returns (100, 200)
+mortoncode = pm.interleave2(100, 200) # returns (46224)
+pm.deinterleave2(mortoncode) #returns (100, 200)
 #####################################################
  
 # geohashing example
 #####################################################
-geohash = pm.interleave_latlng(40.723471, -73.985361)
+geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
 
-# returns (40.723470943048596, -73.98536103777587)
-pm.deinterleave_latlng(geohash) 
+pm.deinterleave_latlng(geohash) # returns (40.723470943048596, -73.98536103777587)
 #####################################################
 ```
 
