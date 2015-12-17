@@ -28,7 +28,15 @@ From the root directory, execute `nosetests`.
 
 ## Usage
 
-* **3-d hashing**
+* **geo-hashing**
+```python
+import pymorton as pm
+geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
+pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
+```
+
+
+* **3D hashing**
 ```python
 import pymorton as pm
 
@@ -40,7 +48,7 @@ pm.deinterleave3(mortoncode)              # returns (100, 200, 50)
 ```
 
 
-* **2-d hashing**
+* **2D hashing**
 ```python
 import pymorton as pm
 mortoncode = pm.interleave(100, 200)     # returns (46224)
@@ -48,14 +56,6 @@ mortoncode = pm.interleave(100, 200)     # returns (46224)
 mortoncode = pm.interleave2(100, 200)    # returns (46224)
 
 pm.deinterleave2(mortoncode)             # returns (100, 200)
-```
-
-
-* **geo-hashing**
-```python
-import pymorton as pm
-geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
-pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
 ```
 
 
