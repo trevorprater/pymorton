@@ -12,6 +12,12 @@ In mathematical analysis and computer science, Z-order, Morton order, or Morton 
 ```
 pip install pymorton
 ```
+or
+```
+git clone https://github.com/trevorprater/pymorton.git
+cd pymorton
+python setup.py install
+```
 
 ## Tests
 
