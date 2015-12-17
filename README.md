@@ -28,33 +28,31 @@ nosetests
 
 ## Usage
 
+
+* 3-d data hashing
 ```python
 
 import pymorton as pm
 
-# three-dimensional hashing example
-#####################################################
 mortoncode = pm.interleave(100, 200, 50) # returns 5162080
 # or
 mortoncode = pm.interleave3(100, 200, 50) # returns 5162080
 
 pm.deinterleave3(mortoncode) # returns (100, 200, 50)
-#####################################################
+```
 
-# two-dimensional hashing example
-#####################################################
+* 2-d data hashing
+```
 mortoncode = pm.interleave(100, 200) # returns (46224)
 # or
 mortoncode = pm.interleave2(100, 200) # returns (46224)
 pm.deinterleave2(mortoncode) #returns (100, 200)
-#####################################################
- 
-# geohashing example
-#####################################################
-geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
+```
 
+* Geohashing
+```
+geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
 pm.deinterleave_latlng(geohash) # returns (40.723470943048596, -73.98536103777587)
-#####################################################
 ```
 
 ## API
