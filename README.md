@@ -32,6 +32,7 @@ From the root directory, execute `nosetests`.
 ```python
 import pymorton as pm
 geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
+
 pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
 ```
 
