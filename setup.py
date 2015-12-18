@@ -8,7 +8,7 @@ def build():
             author_email = 'trevor.prater@gmail.com',
             description = 'A lightweight morton coder with lat/long support.',
             license = 'MIT',
-            keywords = 'nearest-neighbors, geohash, geo, z-order, morton, hashing',
+            keywords = 'nearest neighbors, geo hashing, geo, z-order, morton coding, hashing',
             url = 'https://github.com/trevorprater/pymorton',
             packages = ['pymorton'],
             install_requires = [],
