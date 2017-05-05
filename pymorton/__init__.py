@@ -85,7 +85,7 @@ def interleave2(*args):
         raise ValueError('Usage: interleave2(x, y)')
     for arg in args:
         if not isinstance(arg, int):
-            print 'Usage: interleave2(x, y)'
+            print('Usage: interleave2(x, y)')
             raise ValueError("Supplied arguments contain a non-integer!")
 
     return __part1by1(args[0]) | (__part1by1(args[1]) << 1)
@@ -96,7 +96,7 @@ def interleave3(*args):
         raise ValueError('Usage: interleave3(x, y, z)')
     for arg in args:
         if not isinstance(arg, int):
-            print 'Usage: interleave3(x, y, z)'
+            print('Usage: interleave3(x, y, z)')
             raise ValueError("Supplied arguments contain a non-integer!")
 
     return __part1by2(args[0]) | (__part1by2(args[1]) << 1) | (
@@ -146,14 +146,14 @@ def interleave_latlng(lat, lng):
 
 def deinterleave2(n):
     if not isinstance(n, int):
-        print 'Usage: deinterleave2(n)'
+        print('Usage: deinterleave2(n)')
         raise ValueError("Supplied arguments contain a non-integer!")
     return __unpart1by1(n), __unpart1by1(n >> 1)
 
 
 def deinterleave3(n):
     if not isinstance(n, int):
-        print 'Usage: deinterleave2(n)'
+        print('Usage: deinterleave2(n)')
         raise ValueError("Supplied arguments contain a non-integer!")
     return __unpart1by2(n), __unpart1by2(n >> 1), __unpart1by2(n >> 2)
 
