@@ -18,4 +18,13 @@ class TestPymorton(unittest.TestCase):
         assert(pm.deinterleave_latlng(latlng_morton) == \
                 (40.712013971060514, -74.00816400535405))
 
+    def test_ordering(self):
+        assert pm.interleave_latlng(-40.723471, -73.985361) < \
+                pm.interleave_latlng(-40.523471, -73.785361)
+        assert pm.interleave_latlng(40.723471, 40.734567) > \
+               pm.interleave_latlng(40.723271, 40.734367) 
+
+if __name__ == '__main__':
+    unittest.main()
+
 
