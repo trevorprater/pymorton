@@ -11,7 +11,7 @@ Interleaved bits (aka Morton numbers) are useful for linearizing K-dimensional i
 
 
 Useful references:
-* [Z-order curve, Wikipedia](https://en.wikipedia.org/wiki/Z-order_curve)
+* [Z-order curve](https://en.wikipedia.org/wiki/Z-order_curve)
 * [Implementation for the algorithm (1)](http://stackoverflow.com/a/18528775)
 * [Implementation for the algorithm (2)](https://github.com/Forceflow/libmorton)
 * [Extended explanation with different algorithms](http://www.forceflow.be/2013/10/07/morton-encodingdecoding-through-bit-interleaving-implementations/)
