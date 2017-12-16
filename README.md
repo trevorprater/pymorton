@@ -23,14 +23,16 @@ In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *
 
    imgs = [(fname, Image.open(fname)) for fname in glob('imgpath/*.jpg')]
    
+   # for each image, generate a tuple of len==3, representing the image's average RGB value
    avg_rgb_values = [
        [mean(img.getdata(band)) for band in range(3)] for _, img in imgs]
-       
-   encoded_imgs = zip([fname for fname, _ in imgs],
+   
+   # using the average RGB values, compute the Z-order of each image
+   hashed_imgs = zip([fname for fname, _ in imgs],
                       [interleave_3(*avg_rgb) for avg_rgb in avg_rgb_values])
    
    # returns a sorted-by-color list of photos found within the directory
-   return sorted(encoded_imgs, key=lambda img_tuple: img_tuple[1])
+   return sorted(hashed_imgs, key=lambda img_tuple: img_tuple[1])
    ```
 
 While this is a fairly uncommon use-case for *Morton coding*, I believe it illustrates the utility of the algorithm quite well. Morton coding is most frequently used within the realm of geospatial indexing, but its potential applications are infinite!
