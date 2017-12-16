@@ -1,5 +1,5 @@
 # pymorton
-A lightweight Python library that enables [Morton Coding](https://en.wikipedia.org/wiki/Z-order_curve) and geospatial indexing.
+A lightweight Python library that enables efficient ordinal hashing of multidimensonal data via [Morton coding / Z-ordering](https://en.wikipedia.org/wiki/Z-order_curve), along with support for geospatial indexing.
 <p align="center">
   <img src="http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png" width=50% height=20%>
 </p>
@@ -10,9 +10,9 @@ In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *
 
 *At the highest level, *pymorton* is split into two logical functions:
 
-  * `(de)interleave`: Responsible for encoding/decoding hashes representing two or three dimensionsal integer sets. `{x, y, z ∈ Z}` or `{x, y ∈ Z}`.
+  * **(de)interleave**: Responsible for encoding/decoding hashes representing two or three dimensionsal integer sets. `{x, y, z ∈ Z}` or `{x, y ∈ Z}`.
   
-  * `(de)interleave_latlng`: Encodes and decodes hashes representing latitude and longitude information.
+  * **(de)interleave_latlng**: Encodes and decodes hashes representing latitude and longitude information.
 
 
 
@@ -69,15 +69,6 @@ From the root directory, execute `nosetests`.
 
 ## Usage
 
-* **geo-hashing**
-```python
-import pymorton as pm
-
-geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
-
-pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
-```
-
 
 * **3D-hashing**
 ```python
@@ -100,6 +91,16 @@ mortoncode = pm.interleave(100, 200)     # returns (46224)
 mortoncode = pm.interleave2(100, 200)    # returns (46224)
 
 pm.deinterleave2(mortoncode)             # returns (100, 200)
+```
+
+
+* **geo-hashing**
+```python
+import pymorton as pm
+
+geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
+
+pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
 ```
 
 
