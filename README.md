@@ -12,7 +12,7 @@ where `{x, y, ..., K}` are combined into a single ordinal value that is easily c
 
   * **(de)interleave**: encodes/decodes hashes representing two or three dimensionsal integer sets. `{x, y, z ∈ Z}` or `{x, y ∈ Z}`, where `Z` represents all integer values.
   
-  * **(de)interleave_latlng**: encodes and decodes hashes representing latitude and longitude information.
+  * **(de)interleave_latlng**: encodes and decodes hashes representing latitude and longitude.
 
 <div style="page-break-after: always;"></div>
 
