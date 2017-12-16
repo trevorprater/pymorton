@@ -26,15 +26,15 @@ where `{x, y, ..., K}` are combined into a single ordinal value that is easily c
    from PIL import Image
    import pymorton
 
-   imgs = [(fname, Image.open(fname)) for fname in glob('imgpath/*.jpg')]
+   imgs = [(fname, Image.open(fname)) for fname in glob('imgpath/*.jpg')[:100]]
    
    # for each image, generate a tuple of len==3, representing the image's average RGB value
    avg_rgb_values = [
-       [mean(img.getdata(band)) for band in range(3)] for _, img in imgs]
+       [int(mean(img.getdata(band))) for band in range(3)] for _, img in imgs]
    
    # using the average RGB values, compute the Z-order of each image
-   hashed_imgs = zip([fname for fname, _ in imgs],
-                      [pymorton.interleave(*avg_rgb) for avg_rgb in avg_rgb_values])
+   hashed_imgs = list(zip([fname for fname, _ in imgs],
+                      [pymorton.interleave(*avg_rgb) for avg_rgb in avg_rgb_values]))
    
    # returns a sorted-by-color list of photos found within the directory
    return sorted(hashed_imgs, key=lambda img_tuple: img_tuple[1])
