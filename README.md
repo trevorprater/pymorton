@@ -1,7 +1,7 @@
 # pymorton
 A lightweight Python library that enables ordinal hashing of multidimensonal data via [Morton coding / Z-ordering](https://en.wikipedia.org/wiki/Z-order_curve), along with support for geospatial indexing.
 <p align="center">
-  <img src="http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png" width=50% height=20%>
+  <img src="https://i.imgur.com/4EHntzb.jpg" width=75% height=75%>
 </p>
 
 In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *Morton-code* is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by IBM researcher, *[G. M. Morton](https://domino.research.ibm.com/library/cyberdig.nsf/papers/0DABF9473B9C86D48525779800566A39/$File/Morton1966.pdf)*. *The z-value* of a point in multidimensions is calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees, skip lists, or hash tables. The resulting ordering can equivalently be described as the order one would achieve from a depth-first traversal of a quadtree,
