@@ -4,11 +4,9 @@ A lightweight Python library that enables efficient ordinal hashing of multidime
   <img src="http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png" width=50% height=20%>
 </p>
 
-In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *Morton-code* is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by IBM researcher, *[G. M. Morton](https://domino.research.ibm.com/library/cyberdig.nsf/papers/0DABF9473B9C86D48525779800566A39/$File/Morton1966.pdf)*. *The z-value* of a point in multidimensions is calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees, skip lists, or hash tables. The resulting ordering can equivalently be described as the order one would achieve from a depth-first traversal of a quadtree.
+In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *Morton-code* is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by IBM researcher, *[G. M. Morton](https://domino.research.ibm.com/library/cyberdig.nsf/papers/0DABF9473B9C86D48525779800566A39/$File/Morton1966.pdf)*. *The z-value* of a point in multidimensions is calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees, skip lists, or hash tables. The resulting ordering can equivalently be described as the order one would achieve from a depth-first traversal of a quadtree, where `{x, y, ..., K}` are combined into a single ordinal value that is easily compared, searched, and indexed against other *Morton numbers*. 
 
-*`{x, y, ..., K}`* are combined into a single ordinal value that is easily compared, searched, and indexed against other *Morton numbers*. 
-
-*At the highest level, *pymorton* is split into two logical functions:
+*At the highest level, *pymorton* is split into two logical functions*
 
   * **(de)interleave**: Responsible for encoding/decoding hashes representing two or three dimensionsal integer sets. `{x, y, z ∈ Z}` or `{x, y ∈ Z}`.
   
