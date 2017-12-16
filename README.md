@@ -4,21 +4,23 @@ A lightweight Python library that enables ordinal hashing of multidimensonal dat
   <img src="http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png" width=50% height=20%>
 </p>
 
-In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *Morton-code* is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by IBM researcher, *[G. M. Morton](https://domino.research.ibm.com/library/cyberdig.nsf/papers/0DABF9473B9C86D48525779800566A39/$File/Morton1966.pdf)*. *The z-value* of a point in multidimensions is calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees, skip lists, or hash tables. The resulting ordering can equivalently be described as the order one would achieve from a depth-first traversal of a quadtree, where `{x, y, ..., K}` are combined into a single ordinal value that is easily compared, searched, and indexed against other *Morton numbers*. 
+In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *Morton-code* is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by IBM researcher, *[G. M. Morton](https://domino.research.ibm.com/library/cyberdig.nsf/papers/0DABF9473B9C86D48525779800566A39/$File/Morton1966.pdf)*. *The z-value* of a point in multidimensions is calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used, such as binary search trees, B-trees, skip lists, or hash tables. The resulting ordering can equivalently be described as the order one would achieve from a depth-first traversal of a quadtree,
+where `{x, y, ..., K}` are combined into a single ordinal value that is easily compared, searched, and indexed against other *Morton numbers*. 
+
 
 *At the highest level, **pymorton** is split into two logical functions*:
 
-  * **(de)interleave**: encodes/decodes hashes representing two or three dimensionsal integer sets. `{x, y, z ∈ Z}` or `{x, y ∈ Z}`.
+  * **(de)interleave**: encodes/decodes hashes representing two or three dimensionsal integer sets. `{x, y, z ∈ Z}` or `{x, y ∈ Z}`, where `Z` represents all integer values.
   
   * **(de)interleave_latlng**: encodes and decodes hashes representing latitude and longitude information.
 
-
+<div style="page-break-after: always;"></div>
 
 ### Example usage scenario:
  * *Given a directory of images, **sort the images by color** (average RGB)*:
  
  
-   ```
+   ```python
    from statistics import mean
    from glob import glob
    from PIL import Image
@@ -43,15 +45,19 @@ While the above use-case is fairly uncommon in the context of *Morton-coding*, I
 
 ## Installation
 
-```
+via [pip](https://pypi.python.org/pypi/pymorton/0.1.0):
+```bash
 pip install pymorton
 ```
-or
-```
+
+
+via [source](https://github.com/trevorprater/pymorton):
+```bash
 git clone https://github.com/trevorprater/pymorton.git
 cd pymorton
 python setup.py install
 ```
+
 
 ## Usage
 
@@ -59,11 +65,10 @@ python setup.py install
 ```python
 import pymorton as pm
 
-mortoncode = pm.interleave(100, 200, 50)  # returns 5162080
-# or
-mortoncode = pm.interleave3(100, 200, 50) # returns 5162080
+mortoncode = pm.interleave(100, 200, 50)  # 5162080
+mortoncode = pm.interleave3(100, 200, 50) # 5162080
 
-pm.deinterleave3(mortoncode)              # returns (100, 200, 50)
+pm.deinterleave3(mortoncode)              # (100, 200, 50)
 ```
 
 
@@ -71,11 +76,10 @@ pm.deinterleave3(mortoncode)              # returns (100, 200, 50)
 ```python
 import pymorton as pm
 
-mortoncode = pm.interleave(100, 200)     # returns (46224)
-# or
-mortoncode = pm.interleave2(100, 200)    # returns (46224)
+mortoncode = pm.interleave(100, 200)     # 46224
+mortoncode = pm.interleave2(100, 200)    # 46224
 
-pm.deinterleave2(mortoncode)             # returns (100, 200)
+pm.deinterleave2(mortoncode)             # (100, 200)
 ```
 
 
@@ -83,9 +87,9 @@ pm.deinterleave2(mortoncode)             # returns (100, 200)
 ```python
 import pymorton as pm
 
-geohash = pm.interleave_latlng(40.723471, -73.985361) # returns '03023211233202130332202203002303'
+geohash = pm.interleave_latlng(40.723471, -73.985361) # '03023211233202130332202203002303'
 
-pm.deinterleave_latlng(geohash)                       # returns (40.723470943048596, -73.98536103777587)
+pm.deinterleave_latlng(geohash)                       # (40.723470943048596, -73.98536103777587)
 ```
 
 
@@ -116,11 +120,14 @@ pm.deinterleave_latlng(geohash)                       # returns (40.723470943048
     * Returns a tuple representing the arguments to
                    the corresponding interleave_latlng() call.
 
+<div style="page-break-after: always;"></div>
+
 ## Tests
 
 From the project's root directory, execute `nosetests`.
 
 Please feel free to contact *trevor.prater@gmail.com* regarding any questions/comments/issues.
+
 
 ### References:
 
@@ -128,6 +135,7 @@ Please feel free to contact *trevor.prater@gmail.com* regarding any questions/co
 * [Implementation for the algorithm (1)](http://stackoverflow.com/a/18528775)
 * [Implementation for the algorithm (2)](https://github.com/Forceflow/libmorton)
 * [Extended explanation with different algorithms](http://www.forceflow.be/2013/10/07/morton-encodingdecoding-through-bit-interleaving-implementations/)
+
 
 ## License
 MIT
