@@ -11,8 +11,8 @@ In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *
 *`{x, y, ..., K}`* are combined into a single ordinal value that is easily compared, searched, and indexed against other *Morton numbers*. *Note: `{x, y, ..., K ∈ Z}`*.
 
 
-### Example practical application
-##### **Given a directory of images, sort the images by color (*average RGB*)**:
+### Example usage scenario:
+#### **Given a directory of images, sort the images by color (*average RGB*)**:
    ```
    from statistics import mean
    from glob import glob
@@ -33,7 +33,7 @@ In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *
 While this is a fairly uncommon use-case for *Morton coding*, I believe it illustrates the utility of the algorithm quite well. Morton coding is most frequently used within the realm of geospatial indexing, but its potential applications are infinite!
 
 
-Useful references:
+### References:
 
 * [Z-order curve](https://en.wikipedia.org/wiki/Z-order_curve)
 * [Implementation for the algorithm (1)](http://stackoverflow.com/a/18528775)
