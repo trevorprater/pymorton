@@ -1,5 +1,5 @@
 # pymorton
-A lightweight Python library that enables [Morton coding](https://en.wikipedia.org/wiki/Z-order_curve) and geospatial indexing.
+A lightweight Python library that enables [Morton Coding](https://en.wikipedia.org/wiki/Z-order_curve) and geospatial indexing.
 <p align="center">
   <img src="http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png" width=50% height=20%>
 </p>
