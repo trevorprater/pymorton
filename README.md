@@ -7,7 +7,7 @@ In mathematical analysis and computer science, Z-order, Morton-order, or a Morto
 
 In the context of linearizing K-dimensional integer coordinates, *Morton numbers* are very useful: **`{x, y, ..., K}`** are combined into a single ordinal value that is easily compared, searched, and indexed against other *Morton numbers*, where the inputs, **`{x, y, ..., K}`**, exist in the domain of integers, **`{x, y, ..., K ∈ Z}`**.
 
-*For example, assume that you need to **sort a corpus of images by average *RGB* values of each image's pixels**: *Morton-coding* provides a simple solution to this problem via the generation of a *(hash)* for each image that represents its *average RGB* tuple within a single ordinal integer value.*
+*For example, assume that you need to **sort a corpus of images by average *RGB* pixel value**: *Morton-coding* provides a simple solution to this problem via the generation of a *(hash)* for each image that represents its *average RGB* tuple within a single ordinal integer value.*
 
 This algorithm has many practical applications, ranging from geospatial search to computer vision.
 
