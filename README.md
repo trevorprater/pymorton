@@ -1,5 +1,5 @@
 # pymorton
-A lightweight Python library that enables ordinal hashing of multidimensonal data via [Morton coding / Z-ordering](https://en.wikipedia.org/wiki/Z-order_curve), along with support for geospatial indexing.
+**A lightweight Python library that enables ordinal hashing of multidimensonal data via [Morton coding / Z-ordering](https://en.wikipedia.org/wiki/Z-order_curve), along with support for geospatial indexing.**
 <p align="center">
   <img src="https://i.imgur.com/4EHntzb.jpg" width=75% height=75%>
 </p>
