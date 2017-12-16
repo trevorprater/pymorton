@@ -87,9 +87,9 @@ pm.deinterleave2(mortoncode)             # (100, 200)
 ```python
 import pymorton as pm
 
-geohash = pm.interleave_latlng(40.723471, -73.985361) # '03023211233202130332202203002303'
+geohash = pm.interleave_latlng(40.723471, -73.985361)     # '03023211233202130332202203002303'
 
-pm.deinterleave_latlng(geohash)                       # (40.723470943048596, -73.98536103777587)
+pm.deinterleave_latlng(geohash)                           # (40.723470943048596, -73.98536103777587)
 ```
 
 
