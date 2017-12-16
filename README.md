@@ -2,13 +2,17 @@
 
 A simple library that enables Morton coding/hashing with built-in geo-hashing support.
 
-Interleaved bits (aka Morton numbers) are useful for linearizing K-dimensional integer coordinates, so `x, y ... K` are combined into a single number that is easily compared, searched, and indexed in addition to being ordinally close to a Morton number that represents a point nearby to `x, y ... K`.
+In mathematical analysis and computer science, Z-order, Morton-order, or a Morton-code is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by G. M. Morton. The z-value of a point in multidimensions is simply calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used such as binary search trees, B-trees, skip lists or (with low significant bits truncated) hash tables. The resulting ordering can equivalently be described as the order one would get from a depth-first traversal of a quadtree.
+
+*Morton numbers* (interleaved bits) are useful for linearizing K-dimensional integer coordinates. In this context, **{x, y, ..., K}** are combined into a single ordinal value that is easily compared, searched, and indexed against other ordinal values generated from **{x', y', ..., K'}**, where the inputs exist in the domain of natural numbers, **`{x, y, ..., K ∈ N}`**.
+
+For example, assume that you need to **sort a corpus of images by their average *RGB* values**: *Morton-coding* provides a simple solution to this problem via the generation of a *(hash)* for each image that represents its *average RGB* tuple within a single ordinal integer value.
+
+This algorithm has many practical applications, ranging from geospatial search to computer vision.
 
 <p align="center">
   <img src="http://asgerhoedt.dk/wp-content/uploads/2012/10/MortonCurve-8x8x8.png">
 </p>
-
-In mathematical analysis and computer science, Z-order, Morton order, or Morton code is a function which maps multidimensional data to one dimension while preserving locality of the data points. It was introduced in 1966 by G. M. Morton. The z-value of a point in multidimensions is simply calculated by interleaving the binary representations of its coordinate values. Once the data are sorted into this ordering, any one-dimensional data structure can be used such as binary search trees, B-trees, skip lists or (with low significant bits truncated) hash tables. The resulting ordering can equivalently be described as the order one would get from a depth-first traversal of a quadtree.
 
 
 Useful references:
