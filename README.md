@@ -12,7 +12,9 @@ In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *
 
 
 ### Example usage scenario:
-#### **Given a directory of images, sort the images by color (*average RGB*)**:
+ * *Given a directory of images, **sort the images by color** (average RGB)*:
+ 
+ 
    ```
    from statistics import mean
    from glob import glob
@@ -26,7 +28,8 @@ In mathematical analysis and computer science, *Z-order*, *Morton-order*, or a *
        
    encoded_imgs = zip([fname for fname, _ in imgs],
                       [interleave_3(*avg_rgb) for avg_rgb in avg_rgb_values])
-                      
+   
+   # returns a sorted-by-color list of photos found within the directory
    return sorted(encoded_imgs, key=lambda img_tuple: img_tuple[1])
    ```
 
