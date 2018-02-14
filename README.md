@@ -1,4 +1,7 @@
-# pymorton
+# <div align="center">pymorton</div>
+
+# <div align="center">[![GitHub tag](https://img.shields.io/github/tag/trevorprater/pymorton.svg)]() [![License](https://img.shields.io/badge/license-MIT-red.svg)]() [![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)]() [![GitHub issues](https://img.shields.io/github/issues/trevorprater/pymorton.svg)]() [![Coverage Status](https://img.shields.io/codecov/c/github/trevorprater/trevorprater.svg)](http://codecov.io/github/trevorprater/pymorton?branch=master) [![Join the chat at https://gitter.im/trevorprater/pymorton](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/trevorprater/pymorton?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)</div>
+
 **A lightweight Python library that enables ordinal hashing of multidimensonal data via [Morton coding / Z-ordering](https://en.wikipedia.org/wiki/Z-order_curve), along with support for geospatial indexing.**
 <p align="center">
   <img src="https://i.imgur.com/WlMKO20r.jpg" height=10% width=100%>
