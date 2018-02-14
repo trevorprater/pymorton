@@ -6,7 +6,7 @@ with open('DESCRIPTION.txt') as f:
 def build():
     setup(
             name='pymorton',
-            version='1.0.0',
+            version='1.0.1',
             author='Trevor Prater',
             author_email='trevor.prater@gmail.com',
             description='A lightweight morton coder with lat/long support.',
