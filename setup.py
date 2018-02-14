@@ -1,12 +1,12 @@
 from setuptools import setup
 
-with open('README.md') as f:
+with open('DESCRIPTION.txt') as f:
     long_description = f.read()
 
 def build():
     setup(
             name='pymorton',
-            version='0.2.3',
+            version='0.2.4',
             author='Trevor Prater',
             author_email='trevor.prater@gmail.com',
             description='A lightweight morton coder with lat/long support.',
