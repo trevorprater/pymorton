@@ -3,7 +3,7 @@ from setuptools import setup
 def build():
     setup(
             name = 'pymorton',
-            version = '0.2.0',
+            version = '0.2.1',
             author = 'Trevor Prater',
             author_email = 'trevor.prater@gmail.com',
             description = 'A lightweight morton coder with lat/long support.',
