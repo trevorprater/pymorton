@@ -2,7 +2,6 @@
 # Author: trevor.prater@gmail.com
 # License: MIT
 
-
 _DIVISORS = [180.0 / 2 ** n for n in range(32)]
 
 
