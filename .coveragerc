@@ -1,0 +1,16 @@
+[run]
+branch = True
+source = pymorton
+
+[report]
+exclude_lines =
+    divisor
+    # pymorton (https://github.com/trevorprater/pymorton)
+    # Author: trevor.prater@gmail.com
+    # License: MIT
+    print
+
+ignore_errors = False
+show_missing = True
+omit =
+    tests/*
