@@ -80,6 +80,9 @@ class TestGeoHashing(unittest.TestCase):
     def test_geohash_ordinality(self):
         assert pm.interleave_latlng(-40.723471, -73.985361) < pm.interleave_latlng(-40.523471, -73.785361)
 
+    def test_geohash_divisor_constant_generation(self):
+        assert pm._DIVISORS[4] == 11.25
+
 
 if __name__ == '__main__':
     unittest.main()

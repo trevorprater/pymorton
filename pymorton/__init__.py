@@ -2,7 +2,8 @@
 # Author: trevor.prater@gmail.com
 # License: MIT
 
-DIVISORS = [180.0 / 2 ** n for n in range(32)]
+
+_DIVISORS = [180.0 / 2 ** n for n in range(32)]
 
 
 def __part1by1(n):
@@ -113,7 +114,7 @@ def interleave_latlng(lat, lng):
         y = lat + 90.0
 
     morton_code = ""
-    for dx in DIVISORS:
+    for dx in _DIVISORS:
         digit = 0
         if (y >= dx):
             digit |= 2
@@ -128,7 +129,7 @@ def interleave_latlng(lat, lng):
 
 def deinterleave_latlng(n):
     x = y = 0
-    for (digit, multiplier) in zip([int(d) for d in n], DIVISORS):
+    for (digit, multiplier) in zip([int(d) for d in n], _DIVISORS):
         if (digit & 2):
             y += multiplier
         if (digit & 1):
