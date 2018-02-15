@@ -2,7 +2,7 @@
 
 <p align="center">Ordinal hashing of multidimensonal data and geographic coordinates via <a href="https://en.wikipedia.org/wiki/Z-order_curve">Morton coding / Z-ordering</a>.</p>
 
-# <div align="center">[![GitHub tag](https://img.shields.io/github/tag/trevorprater/pymorton.svg)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg)]() [![Codecov](https://img.shields.io/codecov/c/github/trevorprater/pymorton.svg)]() [![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)]() [![GitHub issues](https://img.shields.io/github/issues/trevorprater/pymorton.svg)]()</div>
+# <div align="center">[![Codecov](https://img.shields.io/codecov/c/github/trevorprater/pymorton.svg)]() [![Travis](https://img.shields.io/travis/trevorprater/pymorton.svg)]() [![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)]() [![GitHub issues](https://img.shields.io/github/issues/trevorprater/pymorton.svg)]() [![GitHub tag](https://img.shields.io/github/tag/trevorprater/pymorton.svg)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg)]() </div>
 
 <p align="center">
   <img src="https://i.imgur.com/WlMKO20r.jpg" height=10% width=100%>
