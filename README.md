@@ -2,7 +2,7 @@
 
 <p align="center">Ordinal hashing of multidimensonal data and geographic coordinates via <a href="https://en.wikipedia.org/wiki/Z-order_curve">Morton coding / Z-ordering</a>.</p>
 
-# <div align="center">[![Codecov](https://img.shields.io/codecov/c/github/trevorprater/pymorton.svg)]() [![Travis](https://img.shields.io/travis/trevorprater/pymorton.svg)]() [![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)]() [![GitHub issues](https://img.shields.io/github/issues/trevorprater/pymorton.svg)]() [![GitHub tag](https://img.shields.io/github/tag/trevorprater/pymorton.svg)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg)]() </div>
+# <div align="center">[![Codecov](https://img.shields.io/codecov/c/github/trevorprater/pymorton.svg)](https://codecov.io/gh/trevorprater/pymorton) [![Travis](https://img.shields.io/travis/trevorprater/pymorton.svg)](https://travis-ci.org/trevorprater/pymorton) [![Status](https://img.shields.io/badge/status-stable-brightgreen.svg)](https://travis-ci.org/trevorprater/pymorton) [![GitHub issues](https://img.shields.io/github/issues/trevorprater/pymorton.svg)](https://github.com/trevorprater/pymorton/issues) [![GitHub tag](https://img.shields.io/github/tag/trevorprater/pymorton.svg)]() [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/trevorprater/pymorton/blob/master/LICENSE.md) </div>
 
 <p align="center">
   <img src="https://i.imgur.com/WlMKO20r.jpg" height=10% width=100%>
