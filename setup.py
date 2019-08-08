@@ -17,7 +17,7 @@ ordinal value that is easily compared, searched, and indexed against other Morto
 def build():
     setup(
             name='pymorton',
-            version='1.0.6',
+            version='1.0.7',
             author='Trevor Prater',
             author_email='trevor.prater@gmail.com',
             description='A lightweight morton coder with lat/long support.',
