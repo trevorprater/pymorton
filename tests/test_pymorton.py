@@ -3,6 +3,8 @@
 # License: MIT
 
 import unittest
+import random
+import sys
 import pymorton as pm
 from nose.tools import assert_raises
 
@@ -17,9 +19,25 @@ class TestOrdinalHashing(unittest.TestCase):
 
     def test_hash_reversability_2d_valid(self):
         assert (100, 30) == pm.deinterleave2(pm.interleave(100, 30))
+        if getattr(sys, 'maxint', 0) and sys.maxint <= 2 ** 31 - 1:
+            max_v = 0x0fff
+        else:
+            max_v = 0x0fffffff
+        for i in range(100):
+            p1 = (random.randint(0, max_v), random.randint(0, max_v))
+            print(p1, pm.deinterleave2(pm.interleave(*p1)))
+            assert p1 == pm.deinterleave2(pm.interleave(*p1))
 
     def test_hash_reversability_3d_valid(self):
         assert pm.deinterleave3(pm.interleave(100, 30, 50)) == (100, 30, 50)
+        if getattr(sys, 'maxint', 0) and sys.maxint <= 2 ** 31 - 1:
+            max_v = 0xff
+        else:
+            max_v = 0xffff
+        for i in range(100):
+            p1 = (random.randint(0, max_v), random.randint(0, max_v), random.randint(0, max_v))
+            print(p1, pm.deinterleave3(pm.interleave(*p1)))
+            assert p1 == pm.deinterleave3(pm.interleave(*p1))
 
     def test_hash_ordinality_2d(self):
         assert pm.interleave(10, 25) < pm.interleave(10, 50)
